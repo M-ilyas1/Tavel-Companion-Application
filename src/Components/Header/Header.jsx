@@ -1,36 +1,24 @@
-import React from "react";
-// import { Autocomplete } from "@react-google-maps/api";
-import { AppBar, Toolbar, Typography, InputBase, Box } from "@material-ui/core";
-import SearchIcon from '@material-ui/icons/Search';
+import React from 'react';
+import { IoIosSearch } from "react-icons/io";
 
-import useStyles from './styles'
 
 function Header() {
-  const classes = useStyles();
-
   return (
-    <AppBar position="static">
-      <Toolbar className={classes.toolbar}>
-        <Typography variant="h5" className={classes.title}>
-          Gilgit Travels
-        </Typography>
-        <Box display="flex">
-          {/* <Typography variant="h5" className={classes.title}>
-            Explore New Places
-          </Typography> */}
-          {/* <Autocomplete> */}
-            <div className={classes.search}>
-              <div className={classes.searchIcon}>
-                <SearchIcon />
-              </div>
-              <InputBase placeholder="Search ...." classes={{root: classes.inputRoot, input: classes.inputInput }}
-              />
-            </div>
-          {/* </Autocomplete> */}
-        </Box>
-      </Toolbar>
-    </AppBar>
-  );
+    <>
+      <div className='bg-blue-800 text-white py-4 px-4 md:px-10 shadow-2xl items-center grid grid-cols-2 md:grid-cols-2'>
+        <div><h1 className='text-[25px] text-[#fffffff0]'>Travel Advisor</h1></div>
+        <div className='flex justify-end'>
+          <div className='flex items-center gap-5'>
+          <h1 className='text-[17px] text-[#fffffff0] md:block hidden'>Explore New Places</h1>
+          <div className='flex items-center gap-2 p-2 bg-[#ffffff4e] rounded-md'>
+            <div className='text-[20px]'><IoIosSearch/></div>
+            <input type="text" placeholder='Search place' className='bg-transparent outline-none '/>
+          </div>
+          </div>
+        </div>
+      </div>
+    </>
+  )
 }
 
-export default Header;
+export default Header

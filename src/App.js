@@ -1,6 +1,7 @@
 import React from "react";
 import { CssBaseline, Grid } from "@material-ui/core";
-import { Header, List, Map } from "./Components";
+import { Header, List, GoogleMapMap } from "./Components";
+import './index.css'
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
           <List />
         </Grid>
         <Grid item xs={12} md={4}>
-          <Map />
+          <GoogleMapMap />
         </Grid>
       </Grid>
 
