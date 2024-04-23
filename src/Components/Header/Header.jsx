@@ -6,7 +6,7 @@ function Header() {
   return (
     <>
       <div className='bg-blue-800 text-white py-4 px-4 md:px-10 shadow-2xl items-center grid grid-cols-2 md:grid-cols-2'>
-        <div><h1 className='text-[25px] text-[#fffffff0]'>Travel Advisor</h1></div>
+        <div><h1 className='md:text-[25px] text-[20px] text-[#fffffff0]'>Gilgit Travel</h1></div>
         <div className='flex justify-end'>
           <div className='flex items-center gap-5'>
           <h1 className='text-[17px] text-[#fffffff0] md:block hidden'>Explore New Places</h1>

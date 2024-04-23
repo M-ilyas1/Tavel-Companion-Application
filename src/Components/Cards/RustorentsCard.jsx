@@ -1,20 +1,21 @@
-import React from "react";
+import React from 'react'
 import { FaStar } from "react-icons/fa";
 import { LiaCertificateSolid } from "react-icons/lia";
 import { FaLocationDot } from "react-icons/fa6";
 import { MdLocalPhone } from "react-icons/md";
 
-
-function HotelCard({
-  Image,
-  Heading,
-  Price,
-  Ranking,
-  Badges
-}) {
+function RustorentsCard({
+    Image,
+    Heading,
+    Price,
+    Ranking,
+    Badges,
+    Location,
+    Phone,
+  }) {
   return (
-    <>
-      <div>
+    <div>
+        <div>
         <div className="bg-white shadow-xl">
           <div>
             <img src={Image} className="w-full " alt="" />
@@ -29,9 +30,7 @@ function HotelCard({
                 <FaStar />
                 <FaStar />
                 <FaStar />
-                <span className="text-gray-300">
-                  <FaStar />
-                </span>
+                <FaStar />
               </div>
               <p className="text-[14px]">275 reviews</p>
             </div>
@@ -82,6 +81,18 @@ function HotelCard({
                 Spanish
               </p>
             </div>
+            <div className="flex justify-between my-2">
+              <span className="text-[18px] text-gray-500">
+                <FaLocationDot />
+              </span>
+              <p className="text-[14px] py-1">{Location}</p>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-[18px] text-gray-500">
+                <MdLocalPhone />
+              </span>
+              <p className="text-[14px] py-1">{Phone}</p>
+            </div>
             <div className="flex gap-2">
               <p className="text-[#373737]">TRIP</p>
               <p className="text-[#373737]">ADVISOR</p>
@@ -90,8 +101,8 @@ function HotelCard({
           </div>
         </div>
       </div>
-    </>
-  );
+    </div>
+  )
 }
 
-export default HotelCard;
+export default RustorentsCard

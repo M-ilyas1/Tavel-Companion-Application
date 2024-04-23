@@ -4,7 +4,13 @@ import Hotel2 from "../../Img/hotel2.png";
 import Hotel3 from "../../Img/hotel3.png";
 import Hotel4 from "../../Img/hotel4.png";
 import Hotel5 from "../../Img/hotel5.png";
+import Chapshroo from "../../Img/ChapShroo.png";
+import Chupati from "../../Img/Chupati.png";
+import Diram from "../../Img/Diram.png";
+import Goli from "../../Img/Goli.png";
+import Mantu from "../../Img/Mantu.png";
 import HotelCard from "../Cards/HotelCard";
+import RustorentsCard from "../Cards/RustorentsCard";
 
 function List() {
   let [tab, setTab] = useState(0);
@@ -64,6 +70,66 @@ function List() {
       </div>
       <section className={`${tab == 0 ? "block" : "hidden"}`}>
         <div className="flex flex-col items-center gap-4 w-full h-[100vh] overflow-scroll">
+          <div className=" w-[95%] ">
+            <RustorentsCard
+              Image={Chapshroo}
+              Heading="Chapshroo"
+              Price="$$-$$"
+              Ranking="#12 of 11423 resturents in Gilgit Baltistan"
+              Badges="Certificate of Excellences in 2020"
+              Location="Minapin Nagar - Gilgit Baltistan"
+              Phone="+12 1312412424"
+            />
+          </div>
+          <div className=" w-[95%] ">
+            <RustorentsCard
+              Image={Chupati}
+              Heading="Chupati"
+              Price="$$-$$"
+              Ranking="#12 of 11423 resturents in Gilgit Baltistan"
+              Badges="Certificate of Excellences in 2020"
+              Location="Minapin Nagar - Gilgit Baltistan"
+              Phone="+12 1312412424"
+            />
+          </div>
+          <div className=" w-[95%] ">
+            <RustorentsCard
+              Image={Diram}
+              Heading="Diram Fitii"
+              Price="$$-$$"
+              Ranking="#12 of 11423 resturents in Gilgit Baltistan"
+              Badges="Certificate of Excellences in 2020"
+              Location="Minapin Nagar - Gilgit Baltistan"
+              Phone="+12 1312412424"
+            />
+          </div>
+          <div className=" w-[95%] ">
+            <RustorentsCard
+              Image={Goli}
+              Heading="Goli"
+              Price="$$-$$"
+              Ranking="#12 of 11423 resturents in Gilgit Baltistan"
+              Badges="Certificate of Excellences in 2020"
+              Location="Minapin Nagar - Gilgit Baltistan"
+              Phone="+12 1312412424"
+            />
+          </div>
+          <div className=" w-[95%] ">
+            <RustorentsCard
+              Image={Mantu}
+              Heading="Mantu"
+              Price="$$-$$"
+              Ranking="#12 of 11423 resturents in Gilgit Baltistan"
+              Badges="Certificate of Excellences in 2020"
+              Location="Minapin Nagar - Gilgit Baltistan"
+              Phone="+12 1312412424"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className={`${tab == 1 ? "block" : "hidden"}`}>
+        <div className="flex flex-col items-center gap-4 w-full h-[100vh] overflow-scroll">
           <div className=" w-[90%] ">
             <HotelCard
               Image={Hotel3}
@@ -71,8 +137,6 @@ function List() {
               Price="$$$$"
               Ranking="#12 of 11423 resturents in Gilgit Baltistan"
               Badges="Certificate of Excellences in 2020"
-              Location="Minapin Nagar - Gilgit Baltistan"
-              Phone="+12 1312412424"
             />
           </div>
           <div className=" w-[90%] ">
@@ -82,8 +146,6 @@ function List() {
               Price="$$$$"
               Ranking="#12 of 11423 resturents in Gilgit Baltistan"
               Badges="Certificate of Excellences in 2020"
-              Location="Minapin Nagar - Gilgit Baltistan"
-              Phone="+12 1312412424"
             />
           </div>
           <div className=" w-[90%] ">
@@ -93,8 +155,6 @@ function List() {
               Price="$$-$$"
               Ranking="#12 of 11423 resturents in Gilgit Baltistan"
               Badges="Certificate of Excellences in 2020"
-              Location="Minapin Nagar - Gilgit Baltistan"
-              Phone="+12 1312412424"
             />
           </div>
 
@@ -105,8 +165,6 @@ function List() {
               Price="$$$$"
               Ranking="#12 of 11423 resturents in Gilgit Baltistan"
               Badges="Certificate of Excellences in 2020"
-              Location="Minapin Nagar - Gilgit Baltistan"
-              Phone="+12 1312412424"
             />
           </div>
           <div className=" w-[90%] ">
@@ -116,14 +174,9 @@ function List() {
               Price="$$$$"
               Ranking="#12 of 11423 resturents in Gilgit Baltistan"
               Badges="Certificate of Excellences in 2020"
-              Location="Minapin Nagar - Gilgit Baltistan"
-              Phone="+12 1312412424"
             />
           </div>
         </div>
-      </section>
-      <section className={`${tab == 1 ? "block" : "hidden"}`}>
-        Hotelssss
       </section>
     </>
   );
