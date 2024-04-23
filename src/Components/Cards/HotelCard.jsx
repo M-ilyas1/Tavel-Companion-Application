@@ -1,5 +1,9 @@
 import React from "react";
-import { IoIosSearch } from "react-icons/io";
+import { FaStar } from "react-icons/fa";
+import { LiaCertificateSolid } from "react-icons/lia";
+import { FaLocationDot } from "react-icons/fa6";
+import { MdLocalPhone } from "react-icons/md";
+
 
 function HotelCard({
   Image,
@@ -19,64 +23,78 @@ function HotelCard({
           </div>
           <div className="p-4 flex flex-col gap-1">
             <div>
-              <h1>
-                <p>{Heading}</p>
-              </h1>
+              <h1 className="text-[18px] py-1">{Heading}</h1>
             </div>
             <div className="flex justify-between">
-              <IoIosSearch />
-              <p>275 reviews</p>
+              <div className="flex text-[#f9c24a]">
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <FaStar />
+                <span className="text-gray-300">
+                  <FaStar />
+                </span>
+              </div>
+              <p className="text-[14px]">275 reviews</p>
             </div>
             <div className="flex justify-between">
-              <p>Price</p>
-              <p>{Price}</p>
+              <p className="text-[14px]">Price</p>
+              <p className="text-[14px]">{Price}</p>
             </div>
             <div className="flex justify-between">
-              <p>Ranking</p>
-              <p>{Ranking}</p>
+              <p className="text-[14px]">Ranking</p>
+              <p className="text-[14px]">{Ranking}</p>
             </div>
             <div className="flex justify-between">
-              <IoIosSearch />
-              <p>{Badges}</p>
+              <span className="text-[20px]">
+                <LiaCertificateSolid />
+              </span>
+              <p className="text-[14px] py-1">{Badges}</p>
             </div>
             <div className="flex justify-between">
-              <IoIosSearch />
-              <p>Certificate of Excellences in 2021</p>
+              <span className="text-[20px]">
+                <LiaCertificateSolid />
+              </span>
+              <p className="text-[14px] py-1">
+                Certificate of Excellences in 2021
+              </p>
             </div>
             <div className="flex justify-between">
-              <IoIosSearch />
-              <p>Certificate of Excellences in 2022</p>
+              <span className="text-[20px]">
+                <LiaCertificateSolid />
+              </span>
+              <p className="text-[14px] py-1">
+                Certificate of Excellences in 2022
+              </p>
             </div>
-            <div className="flex flex-wrap gap-1">
-              <p className="p-1 bg-[#c8c7c7dc] rounded-full text-[14px]">
+            <div className="flex flex-wrap gap-1 py-1">
+              <p className="p-1 px-2 bg-[#e2e1e1dc] rounded-full text-[13px]">
                 Spanish
               </p>
-              <p className="p-1 bg-[#c8c7c7dc] rounded-full text-[14px]">
-                Winex baar
-              </p>
-              <p className="p-1 bg-[#c8c7c7dc] rounded-full text-[14px]">
+              <p className="p-1 px-2 bg-[#e2e1e1dc] rounded-full text-[13px]">
                 Spanish
               </p>
-              <p className="p-1 bg-[#c8c7c7dc] rounded-full text-[14px]">
-                Vega
-              </p>
-              <p className="p-1 bg-[#c8c7c7dc] rounded-full text-[14px]">
+              <p className="p-1 px-2 bg-[#e2e1e1dc] rounded-full text-[13px]">
                 Spanish
               </p>
-              <p className="p-1 bg-[#c8c7c7dc] rounded-full text-[14px]">
+              <p className="p-1 px-2 bg-[#e2e1e1dc] rounded-full text-[13px]">
                 Spanish
               </p>
-              <p className="p-1 bg-[#c8c7c7dc] rounded-full text-[14px]">
+              <p className="p-1 px-2 bg-[#e2e1e1dc] rounded-full text-[13px]">
                 Spanish
               </p>
             </div>
-            <div className="flex justify-between">
-              <IoIosSearch />
-              <p>{Location}</p>
+            <div className="flex justify-between my-2">
+              <span className="text-[18px] text-gray-500">
+                <FaLocationDot />
+              </span>
+              <p className="text-[14px] py-1">{Location}</p>
             </div>
             <div className="flex justify-between">
-              <IoIosSearch />
-              <p>{Phone}</p>
+              <span className="text-[18px] text-gray-500">
+                <MdLocalPhone />
+              </span>
+              <p className="text-[14px] py-1">{Phone}</p>
             </div>
             <div className="flex gap-2">
               <p className="text-[#373737]">TRIP</p>
