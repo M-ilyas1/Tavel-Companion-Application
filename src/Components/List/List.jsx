@@ -26,29 +26,16 @@ function List() {
         <h1 className="px-6 text-[28px] pt-5 pb-1">Food & Dinner around You</h1>
         <h2 className="px-6 text-[13px]">Types</h2>
         <div className="flex gap-4 px-6 py-2">
-          <select className="w-[120px] text-[16px] font-normal p-1 border-b-2 bg-transparent border-gray-500 outline-none">
-            <option value="">Resturents</option>
-            <option value="" className="text-[14px]">
-              <button onClick={RandomImageGenerator}>Hotels</button>
-            </option>
-            <option value="" className="text-[14px]">
-              <button
-                onClick={() => {
-                  setTab(1);
-                }}
-              >
-                Attractions
-              </button>
-            </option>
-            <option value="" className="text-[14px]">
-              <button
-                onClick={() => {
-                  setTab(2);
-                }}
-              >
-                Lakes
-              </button>
-            </option>
+          <select
+            onChange={(event) => {
+              const selectedTabIndex = parseInt(event.target.value);
+              setTab(selectedTabIndex);
+            }}
+            className="w-[120px] text-[16px] font-normal p-1 border-b-2 bg-transparent border-gray-500 outline-none"
+          >
+            <option value="0">Restaurants</option>
+            <option value="1">Hotels</option>
+            <option value="2">Attractions</option>
           </select>
 
           <select className="w-[120px] text-[16px] font-normal p-1 border-b-2 bg-transparent border-gray-500 outline-none">
@@ -68,7 +55,8 @@ function List() {
           </select>
         </div>
       </div>
-      <section className={`${tab == 0 ? "block" : "hidden"}`}>
+
+      <section className={`${tab === 0 ? "block" : "hidden"}`}>
         <div className="flex flex-col items-center gap-4 w-full h-[100vh] overflow-scroll">
           <div className=" w-[95%] ">
             <RustorentsCard
@@ -128,7 +116,7 @@ function List() {
         </div>
       </section>
 
-      <section className={`${tab == 1 ? "block" : "hidden"}`}>
+      <section className={`${tab === 1 ? "block" : "hidden"}`}>
         <div className="flex flex-col items-center gap-4 w-full h-[100vh] overflow-scroll">
           <div className=" w-[90%] ">
             <HotelCard
