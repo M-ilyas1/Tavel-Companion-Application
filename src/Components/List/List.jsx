@@ -1,30 +1,34 @@
 import React, { useState } from "react";
-import Hotel1 from "../../Img/hotel1.png";
-import Hotel2 from "../../Img/hotel2.png";
-import Hotel3 from "../../Img/hotel3.png";
-import Hotel4 from "../../Img/hotel4.png";
-import Hotel5 from "../../Img/hotel5.png";
-import Chapshroo from "../../Img/ChapShroo.png";
-import Chupati from "../../Img/Chupati.png";
-import Diram from "../../Img/Diram.png";
-import Goli from "../../Img/Goli.png";
-import Mantu from "../../Img/Mantu.png";
-import HotelCard from "../Cards/HotelCard";
+import {
+  ChapShroo,
+  Chupati,
+  Diram,
+  Goli,
+  Hotel1,
+  Hotel2,
+  Hotel3,
+  Hotel4,
+  Hotel5,
+  Lake1,
+  Lake2,
+  Lake3,
+  Lake4,
+  Lake5,
+  Lake6,
+  Mantu,
+} from "../../Img";
 import RustorentsCard from "../Cards/RustorentsCard";
+import HotelCard from "../Cards/HotelCard";
+import LackesCard from "../Cards/LackesCard";
 
 function List() {
   let [tab, setTab] = useState(0);
 
-  function RandomImageGenerator() {
-    setTab(0);
-    // console.log(tabs);
-  }
-
   return (
     <>
       <div className="text-left">
-        <h1 className="px-6 text-[28px] pt-5 pb-1">Food & Dinner around You</h1>
-        <h2 className="px-6 text-[13px]">Types</h2>
+        <h1 className="px-6 text-[22px] font-normal md:text-[30px] pt-5 pb-1">Food & Dinner around You</h1>
+        <h2 className="px-6 text-[14px]">Types</h2>
         <div className="flex gap-4 px-6 py-2">
           <select
             onChange={(event) => {
@@ -35,7 +39,7 @@ function List() {
           >
             <option value="0">Restaurants</option>
             <option value="1">Hotels</option>
-            <option value="2">Attractions</option>
+            <option value="2">Lackes</option>
           </select>
 
           <select className="w-[120px] text-[16px] font-normal p-1 border-b-2 bg-transparent border-gray-500 outline-none">
@@ -57,10 +61,10 @@ function List() {
       </div>
 
       <section className={`${tab === 0 ? "block" : "hidden"}`}>
-        <div className="flex flex-col items-center gap-4 w-full h-[100vh] overflow-scroll">
-          <div className=" w-[95%] ">
+        <div className="flex flex-col items-center gap-4 w-full h-[97vh] overflow-scroll">
+          <div className=" w-[90%] ">
             <RustorentsCard
-              Image={Chapshroo}
+              Image={ChapShroo}
               Heading="Chapshroo"
               Price="$$-$$"
               Ranking="#12 of 11423 resturents in Gilgit Baltistan"
@@ -69,7 +73,7 @@ function List() {
               Phone="+12 1312412424"
             />
           </div>
-          <div className=" w-[95%] ">
+          <div className=" w-[90%] ">
             <RustorentsCard
               Image={Chupati}
               Heading="Chupati"
@@ -80,7 +84,7 @@ function List() {
               Phone="+12 1312412424"
             />
           </div>
-          <div className=" w-[95%] ">
+          <div className=" w-[90%] ">
             <RustorentsCard
               Image={Diram}
               Heading="Diram Fitii"
@@ -91,7 +95,7 @@ function List() {
               Phone="+12 1312412424"
             />
           </div>
-          <div className=" w-[95%] ">
+          <div className=" w-[90%] ">
             <RustorentsCard
               Image={Goli}
               Heading="Goli"
@@ -102,7 +106,7 @@ function List() {
               Phone="+12 1312412424"
             />
           </div>
-          <div className=" w-[95%] ">
+          <div className=" w-[90%] ">
             <RustorentsCard
               Image={Mantu}
               Heading="Mantu"
@@ -117,7 +121,7 @@ function List() {
       </section>
 
       <section className={`${tab === 1 ? "block" : "hidden"}`}>
-        <div className="flex flex-col items-center gap-4 w-full h-[100vh] overflow-scroll">
+        <div className="flex flex-col items-center gap-4 w-full h-[97vh] overflow-scroll">
           <div className=" w-[90%] ">
             <HotelCard
               Image={Hotel3}
@@ -162,6 +166,54 @@ function List() {
               Price="$$$$"
               Ranking="#12 of 11423 resturents in Gilgit Baltistan"
               Badges="Certificate of Excellences in 2020"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className={`${tab === 2 ? "block" : "hidden"}`}>
+        <div className="flex flex-col items-center gap-4 w-full h-[97vh] overflow-scroll">
+        <div className=" w-[90%] ">
+            <LackesCard
+              Image={Lake3}
+              Heading="Rush Lake"
+              Location="Rush Lake is a high-altitude lake located in Nagar Valley, Gilgit-Baltistan"
+            />
+          </div>
+          <div className=" w-[90%] ">
+            <LackesCard
+              Image={Lake5}
+              Heading="Attabad Lake"
+              Location="Attabad Lake Gojal is a lake located in the Gojal region of Gilgit-Baltistan"
+            />
+          </div>
+          <div className=" w-[90%] ">
+            <LackesCard
+              Image={Lake2}
+              Heading="Upper Kachura Lake"
+              Location="The Kachura Lakes are three lakes in the Skardu District of Gilgit-Baltistan"
+            />
+          </div>
+          <div className=" w-[90%] ">
+            <LackesCard
+              Image={Lake4}
+              Heading="Shausar Lake"
+              Location="Sheosar Lake is an alpine lake situated at the western end of Deosai National Park, Gilgit-Baltistan"
+            />
+          </div>
+          
+          <div className=" w-[90%] ">
+            <LackesCard
+              Image={Lake6}
+              Heading="Naltar Lakes"
+              Location="There are three lakes in Naltar Valley known as Naltar Lakes or Bashkiri Lakes at altitudes ranging from 3,050–3,150 metres."
+            />
+          </div>
+          <div className=" w-[90%] ">
+            <LackesCard
+              Image={Lake1}
+              Heading="Satpara Lake"
+              Location="Satpara sar Lake is a natural lake near Skardu in the Gilgit-Baltistan."
             />
           </div>
         </div>
