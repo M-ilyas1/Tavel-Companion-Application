@@ -6,7 +6,7 @@ function LackesCard({Image, Heading, Location}) {
   return (
     <div>
       <div>
-        <div className="bg-white shadow-xl">
+        <div className="bg-white shadow-2xl">
           <div>
             <img src={Image} className="w-full " alt="" />
           </div>

@@ -13,7 +13,7 @@ function HotelCard({
   return (
     <>
       <div>
-        <div className="bg-white shadow-xl">
+        <div className="bg-white shadow-2xl">
           <div>
             <img src={Image} className="w-full " alt="" />
           </div>
